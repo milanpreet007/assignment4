@@ -338,10 +338,10 @@
             // 
             this.HeightLabel.BackColor = System.Drawing.Color.White;
             this.HeightLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.HeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HeightLabel.Location = new System.Drawing.Point(161, 60);
+            this.HeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeightLabel.Location = new System.Drawing.Point(161, 76);
             this.HeightLabel.Name = "HeightLabel";
-            this.HeightLabel.Size = new System.Drawing.Size(131, 47);
+            this.HeightLabel.Size = new System.Drawing.Size(131, 31);
             this.HeightLabel.TabIndex = 2;
             this.HeightLabel.Tag = "height";
             this.HeightLabel.Text = "0";
@@ -352,10 +352,10 @@
             // 
             this.WeightLabel.BackColor = System.Drawing.Color.White;
             this.WeightLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WeightLabel.Location = new System.Drawing.Point(161, 121);
+            this.WeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WeightLabel.Location = new System.Drawing.Point(161, 132);
             this.WeightLabel.Name = "WeightLabel";
-            this.WeightLabel.Size = new System.Drawing.Size(131, 47);
+            this.WeightLabel.Size = new System.Drawing.Size(131, 36);
             this.WeightLabel.TabIndex = 2;
             this.WeightLabel.Tag = "height";
             this.WeightLabel.Text = "0";
