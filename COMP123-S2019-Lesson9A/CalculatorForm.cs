@@ -19,6 +19,7 @@ namespace COMP123_S2019_Lesson9A
         public string outputString { get; set; }
         public float outputValue { get; set; }
         public bool decimalExists { get; set; }
+        double HEIGHT, weight, bmiresult;
 
         public Label ActiveLabel
         {
@@ -146,6 +147,7 @@ namespace COMP123_S2019_Lesson9A
         /// </summary>
         private void finalizeOuput()
         {
+          
             outputValue = float.Parse(outputString);
 
             outputValue = (float)(Math.Round(outputValue, 1));
@@ -160,6 +162,7 @@ namespace COMP123_S2019_Lesson9A
             ActiveLabel.BackColor = Color.White;
             ActiveLabel = null;
         }
+
 
         /// <summary>
         /// This method removes the last character from the Result Label
@@ -190,9 +193,27 @@ namespace COMP123_S2019_Lesson9A
             outputString = "0";
             outputValue = 0.0f;
             decimalExists = false;
+            BMIresulttextBox.Text = "0";
         }
 
-        
+        private void CalculateBMIButton_Click(object sender, EventArgs e)
+        {
+            HEIGHT = Convert.ToDouble(HeightTextbox.Text);
+            weight = Convert.ToDouble(WeighttextBox.Text);
+
+            if (ImpericalradioButton.Checked)
+            {
+                bmiresult = weight * 703 / Math.Pow(HEIGHT, 2);
+                BMIresulttextBox.Text = bmiresult.ToString();
+            }
+            else
+            {
+                bmiresult = weight / Math.Pow(HEIGHT, 2);
+                BMIresulttextBox.Text = bmiresult.ToString();
+            }
+        }
+
+
 
         /// <summary>
         /// This is the event handler for the HeightLabel click event
@@ -233,7 +254,7 @@ namespace COMP123_S2019_Lesson9A
             if (NumberButtonTableLayoutPanel.Location.Y <= ActiveLabel.Location.Y + 55)
             {
                 AnimationTimer.Enabled = false;
-                if(NumberButtonTableLayoutPanel.Location.Y < ActiveLabel.Location.Y + 55)
+                if (NumberButtonTableLayoutPanel.Location.Y < ActiveLabel.Location.Y + 55)
                 {
                     NumberButtonTableLayoutPanel.Location = new Point(currentLocation.X, ActiveLabel.Location.Y + 55);
                 }
